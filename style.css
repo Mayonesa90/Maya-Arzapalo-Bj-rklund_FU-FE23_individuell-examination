@@ -1,3 +1,115 @@
+html {
+    font-size: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+/* -----------------FONTS START------------------*/
+
+.imposter__title, 
+.title,
+.footer-section__title {
+    font-family: 'Fira Sans', sans-serif, bold;
+    font-size: 3.313rem;
+    margin-bottom: 0;
+}
+
+.nav__link,
+.btn {
+    font-size: 0.75rem;
+    text-decoration: none;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 500;
+}
+
+.nav__link:hover {
+    color: black;
+}
+
+/* -----------------FONTS END------------------*/
+
+
+
+/* -----------------HEADER START------------------*/
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 5vh;
+    padding: 10px;
+    align-items: center;
+
+}
+
+.nav__list {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    gap: 15px;
+}
+
+.nav__link {
+    color: #999999;
+}
+
+.nav__link--active {
+    color: black;
+}
+
+
+.btn {
+    width: 146px;
+    height: 40px;
+    border-radius: 3px;
+    border-style: none;
+    border: 2px black solid;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.btn__link {
+    text-decoration: none;
+    color: black;
+}
+
+/* -----------------HEADER END------------------*/
+
+
+/* -----------------IMPOSTER START------------------*/
+
+.imposter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #EEEEEE;
+}
+
+.imposter__copy {
+    max-width: 50vw;
+    text-align: center;
+    margin-bottom: 3vw;
+}
+
+.imposter__actions {
+    display: flex;
+    gap: 2vw;
+    margin-bottom: 2vw;
+}
+
+.btn--black {
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+}
+
+/* -----------------IMPOSTER END------------------*/
+
 .card__img--small {
     width: 20vw;
 }
