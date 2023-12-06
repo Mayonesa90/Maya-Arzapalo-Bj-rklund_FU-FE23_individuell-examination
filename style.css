@@ -35,7 +35,8 @@ body {
 }
 
 .card__product-name,
-.footer-section__subtitle {
+.footer-section__subtitle,
+.form__title  {
     font-family: 'Fira Sans', sans-serif;
     font-weight: 700;
     font-size: 1.375rem;
@@ -70,7 +71,9 @@ body {
 }
 
 .footer-section__copy,
-.footer-section__info {
+.footer-section__info,
+.form__label,
+.form__input {
     font-family: 'Fira Sans', sans-serif;
     font-size: 0.875rem;
     font-weight: 500;
@@ -270,6 +273,41 @@ body {
     padding: 1rem;
     border-radius: 3px;
 }
+
+.footer-section__list {
+    list-style-type: none;
+    padding: 0;
+
+}
+
+.footer-section__item {
+    display: flex;
+    gap: 1rem;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    background-color: white;
+    grid-column: 1/3;
+    border-radius: 3px;
+}
+
+.form__title {
+    margin: 1rem 0;
+}
+
+.form__input {
+    margin-bottom: 1rem;
+    border-style: none;
+    border-bottom: 1px solid black;
+}
+
+.form__input:focus {
+    outline: none;
+}
+
 
 /* -----------------FOOTER END------------------*/
 
