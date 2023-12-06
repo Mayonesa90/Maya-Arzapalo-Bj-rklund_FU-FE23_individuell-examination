@@ -2,6 +2,10 @@ html {
     font-size: 100%;
 }
 
+body {
+    margin: 0;
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -27,6 +31,41 @@ html {
 
 .nav__link:hover {
     color: black;
+}
+
+.card__product-name,
+.footer-section__subtitle {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.375rem;
+    margin-bottom: 5px;
+
+}
+
+.card__product-price,
+.imposter__copy {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 1rem;
+    margin: 0;
+    text-align: center;
+}
+
+.card__title {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 0;
+}
+
+.card__subtitle {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 1.125rem;
+    color: white;
+    opacity: 60%;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 0;
 }
 
 /* -----------------FONTS END------------------*/
@@ -78,6 +117,10 @@ html {
     color: black;
 }
 
+.nav--small-screen {
+    display: none;
+}
+
 /* -----------------HEADER END------------------*/
 
 
@@ -110,10 +153,99 @@ html {
 
 /* -----------------IMPOSTER END------------------*/
 
-.card__img--small {
-    width: 20vw;
+
+/* -----------------MAIN START------------------*/
+
+.main {
+    display: grid;
+    /*
+    grid-template-columns: 20vw 20vw 20vw 20vw;
+    grid-template-rows: 25vh 40vh 40vh;
+    */
+    grid-template-columns: minmax(40vw 40vw, 20vw 20vw 20vw 20vw);
+    grid-template-rows: 25vh 40vh 40vh;
+    grid-auto-flow: row;
+    gap: 15px;
+    justify-content: center;
 }
 
-.card__img--big {
-    width: 45vw;
+.title {
+    grid-column: span 4;
+    text-align: center;
+    align-self: center;
+}
+
+.card--small {
+    grid-column: span 1;
+}
+
+.card--big {
+    grid-column: span 2;
+    height: min-content;
+}
+
+.card {
+    position: relative;
+}
+
+.card__footer {
+    position: absolute;
+    bottom: 7px;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: max-content;
+}
+
+.card__img {
+    opacity: 60%;
+    width: 100%;
+    height: 100%;
+}
+
+.card__img--darken {
+    filter: brightness(30%)
+}
+
+.card__body {
+    position: absolute;
+    bottom: 7px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.btn--white-border {
+    border: 1px white solid;
+    background-color: #343332;
+    color: white;
+    font-weight: 400;
+}
+
+/* -----------------MAIN END------------------*/
+
+
+@media only screen and (max-width: 600px) {
+    
+    .nav--large-screen,
+    .btn--transparent {
+        display: none;
+    }
+
+    .nav--small-screen {
+        display: block;
+    }
+
+    .imposter__title {
+        text-align: center;
+        font-size: 2.25rem;
+    }
+    
+    .main {
+        grid-template-columns: 50vw 50vw;
+        grid-template-rows: auto;
+    }
+
+
 }

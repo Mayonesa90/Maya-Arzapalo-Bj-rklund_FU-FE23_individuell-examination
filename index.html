@@ -13,7 +13,7 @@
 <div class="wrapper">
     <header class="header">
         <img class="logo" alt="ZoCom logo" src="images/logo.svg">
-        <nav class="nav">
+        <nav class="nav nav--large-screen">
             <ul class="nav__list">
                 <li class="nav__item"><a class="nav__link nav__link--active" href="#">HOME</a></li>
                 <li class="nav__item"><a class="nav__link" href="#">HOW IT WORKS</a></li>
@@ -24,6 +24,7 @@
             </ul>
         </nav>
         <button class="btn btn--transparent"><a class="btn__link" href="#">GET A QUOTE</a></button>
+        <img class="nav nav--small-screen" src="images/menu.svg">
     </header>
 
     <section class="imposter">
@@ -46,28 +47,28 @@
         <h1 class="title">Our products</h1>
 
         <article class="card card--small">
-            <img class="card__img card__img--small" src="https://images.unsplash.com/photo-1541598609756-e7dfa98d129f?q=80&w=1227&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="woman wearing green cap">
+            <img class="card__img" src="https://images.unsplash.com/photo-1541598609756-e7dfa98d129f?q=80&w=1227&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="woman wearing green cap">
             <footer class="card__footer">
                 <h2 class="card__product-name">Green Cap</h2>
                 <p class="card__product-price">US$29</p>
             </footer>
         </article>
         <article class="card card--small">
-            <img class="card__img card__img--small"" src="https://images.unsplash.com/photo-1622445275463-afa2ab738c34?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="man wearing white t-shirt">
+            <img class="card__img" src="https://images.unsplash.com/photo-1622445275463-afa2ab738c34?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="man wearing white t-shirt">
             <footer class="card__footer">
                 <h2 class="card__product-name">Zara shirt</h2>
                 <p class="card__product-price">US$19.90</p>
             </footer>
         </article>
         <article class="card card--small">
-            <img class="card__img card__img--small"" src="https://images.unsplash.com/photo-1570051779696-244e9f680cf7?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="man wearing nike air shoes">
+            <img class="card__img" src="https://images.unsplash.com/photo-1570051779696-244e9f680cf7?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="man wearing nike air shoes">
             <footer class="card__footer">
                 <h2 class="card__product-name">Nike Air</h2>
                 <p class="card__product-price">US$34</p>
             </footer>
         </article>
         <article class="card card--small">
-            <img class="card__img card__img--small" src="https://images.unsplash.com/photo-1632333525618-808950db9503?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="man wearing longsleeved black t-shirt">
+            <img class="card__img" src="https://images.unsplash.com/photo-1632333525618-808950db9503?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="man wearing longsleeved black t-shirt">
             <footer class="card__footer">
                 <h2 class="card__product-name">Nerd t-shirt</h2>
                 <p class="card__product-price">US$9.99</p>
@@ -75,20 +76,24 @@
         </article>
 
         <article class="card card--big">
-            <img class="card__img card__img--big" src="https://images.unsplash.com/photo-1564081297963-2f78d8867707?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="women smoking in black clothes">
-            <h2 class="card__title">COLLECTION</h2>
-            <h4 class="card__subtitle">Summer 2021</h4>
-            <div class="card__actions">
-                <a class="btn" href="#">CHECK IT OUT</a>
-            </div>
+            <img class="card__img card__img--darken" src="https://images.unsplash.com/photo-1564081297963-2f78d8867707?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="women smoking in black clothes">
+            <section class="card__body">
+                <h2 class="card__title">COLLECTION</h2>
+                <h4 class="card__subtitle">Summer 2021</h4>
+                <div class="card__actions">
+                    <a class="btn btn--white-border" href="#">CHECK IT OUT</a>
+                </div>
+            </section>
         </article>
         <article class="card card--big">
-            <img class="card__img card__img--big" src="https://images.unsplash.com/photo-1506499550609-14f091850544?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="man with beard wearing har">
-            <h2 class="card__title">COLLECTION</h2>
-            <h4 class="card__subtitle">Summer 2021</h4>
-            <div class="card__actions">
-                <a class="btn" href="#">CHECK IT OUT</a>
-            </div>
+            <img class="card__img card__img--darken" src="https://images.unsplash.com/photo-1506499550609-14f091850544?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="man with beard wearing har">
+            <section class="card__body">
+                <h2 class="card__title">COLLECTION</h2>
+                <h4 class="card__subtitle">Summer 2021</h4>
+                <div class="card__actions">
+                    <a class="btn btn--white-border" href="#">CHECK IT OUT</a>
+                </div>
+            </section>        
         </article>
     </main>
 
