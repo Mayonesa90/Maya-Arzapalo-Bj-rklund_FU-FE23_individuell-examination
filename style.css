@@ -28,9 +28,18 @@ body {
 }
 
 @keyframes bouncy {
-    0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
-    40% {transform: translateY(-7px);} 
-    60% {transform: translateY(-2px);} 
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+        filter: drop-shadow(0px 10px 15px #4444dd);
+    } 
+    40% {
+        transform: translateY(-7px);
+        filter: drop-shadow(0px 17px 13px #4444dd);
+    } 
+    60% {
+        transform: translateY(-2px);
+        filter: drop-shadow(0px 12px 14px #4444dd);
+    } 
 }
 
 .btn--animated {
@@ -62,7 +71,7 @@ body {
 }
 
 .nav__link:hover {
-    color: black;
+    color: #222222;
 }
 
 .card__product-name,
@@ -71,7 +80,7 @@ body {
     font-family: 'Fira Sans', sans-serif;
     font-weight: 700;
     font-size: 1.375rem;
-    margin-bottom: 5px;
+    margin: 5px 0;
 
 }
 
@@ -141,8 +150,9 @@ body {
 .nav__item {
     display: inline-block;
 
-    &:hover {
-    transform: scale(1.3);
+    &:hover {                        /* --------- NAV LINK TRANSFORM ---------- */
+    transform: scale(1.4);
+    margin: 0 7px;
     }
 }
 
@@ -201,7 +211,8 @@ body {
 }
 
 .imposter__copy {
-    max-width: 50vw;
+    /*max-width: 50vw;*/
+    max-width: 32.625rem;
     text-align: center;
     margin-bottom: 3vw;
 }
@@ -213,7 +224,7 @@ body {
 }
 
 .btn--black {
-    background-color: black;
+    background-color: #222222;
     color: white;
     font-size: 1rem;
 }
@@ -232,8 +243,11 @@ body {
 
 .main {
     display: grid;
-    grid-template-columns: 20% 20% 20% 20%;
-    gap: 15px;
+    /*grid-template-columns: repeat(4, 18%);
+    grid-auto-rows: 27%;*/
+    grid-template-columns: repeat(4, minmax(18%, 16.375rem));
+    grid-auto-rows: 23.938rem;
+    gap: 4rem 1.875rem;    
     justify-content: center;
     max-width: 1600px;
     margin: 0 auto;
@@ -241,6 +255,7 @@ body {
 
     @media only screen and (max-width: 600px) {
         grid-template-columns: 45% 45%;
+        grid-auto-rows: auto;
     }
 }
 
@@ -248,7 +263,7 @@ body {
     grid-column: span 4;
     text-align: center;
     align-self: center;
-    padding: 3rem 0;
+    margin: 6.938rem 0 1rem 0;
 
     @media only screen and (max-width: 600px) {
         grid-column: span 2;
@@ -258,23 +273,7 @@ body {
 .card--small {
     grid-column: span 1;
 
-    @media only screen and (max-width: 600px) {
-        grid-column: span 1;
-    }
-}
-
-.card--big {
-    grid-column: span 2;
-    height: min-content;
-
-    @media only screen and (max-width: 600px) {
-    grid-column: span 2;
-    }
-}
-
-.card {
-    position: relative;
-
+    
     &:hover {
     transform: scale(1.2) translateY(-30px); /* ---- ANIMATION PRODUKTBILD -----*/
     opacity: 100%;
@@ -283,7 +282,33 @@ body {
     -webkit-box-shadow: 0px 5px 59px 9px rgba(0,0,0,0.42);
     -moz-box-shadow: 0px 5px 59px 9px rgba(0,0,0,0.42);
     z-index: 2;
+
+    .card__footer {
+        transform: scale(0.8) translate(-62.2%, -9%);
+        width: 125%;
+        background: rgba(255, 255, 255, 0.50);
     }
+
+    }
+
+    @media only screen and (max-width: 600px) {
+        grid-column: span 1;
+    }
+
+}
+
+.card--big {
+    grid-column: span 2;
+    height: 100%;
+
+    @media only screen and (max-width: 600px) {
+    grid-column: span 2;
+    }
+
+}
+
+.card {
+    position: relative;
 }
 
 
@@ -303,17 +328,19 @@ body {
 
 .card__footer {
     position: absolute;
-    bottom: 7px;
+    bottom: -10px;
     top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: max-content;
+    width: 100%;
+    text-align: center;
 }
 
 
 
 .card__img--darken {
-    filter: brightness(30%)
+    filter: brightness(30%);
+    opacity: 100%;
 }
 
 .card__body {
@@ -322,6 +349,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: grid;
 }
 
 
@@ -330,6 +358,10 @@ body {
     background-color: #343332;
     color: white;
     font-weight: 400;
+
+    &:hover {
+        background-color: black;
+    }
 }
 
 /* -----------------MAIN END------------------*/
