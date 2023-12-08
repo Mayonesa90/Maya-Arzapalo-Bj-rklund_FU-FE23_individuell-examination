@@ -1,5 +1,6 @@
 html {
     font-size: 100%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -13,17 +14,26 @@ body {
 
 /* -----------------ANIMATION START------------------*/
 
-@keyframes jiggle {
-    0% {
-        transform: rotate(3deg) translateY(-3px);
-    }
+@keyframes nav-grow {
 
-    50% {
-        transform: rotate(-3deg) translateY(-3px);
+    0% {
+        transform: scale(1) translateY(0px);
     }
 
     100% {
-        transform: rotate(0deg);
+        transform: scale(1.4) translateY(-1.5px);
+        margin: 0 8px;
+    }
+
+}
+
+@keyframes grow {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.2) translateY(-30px);
     }
 }
 
@@ -158,9 +168,9 @@ body {
 .nav__item {
     display: inline-block;
 
-    &:hover {                        /* --------- NAV LINK TRANSFORM ---------- */
-    transform: scale(1.4);
-    margin: 0 7px;
+    &:hover {                            
+    animation: nav-grow 0.75s ease-in-out; /* --------- NAV LINK ANIMATION ---------- */
+    animation-fill-mode: forwards;
     }
 }
 
@@ -256,11 +266,12 @@ body {
     justify-content: center;
     max-width: 1600px;
     margin: 0 auto;
-    padding-bottom: 8rem;
+    padding: 8rem 0;
 
     @media only screen and (max-width: 900px) {
         grid-template-columns: 45% 45%;
         grid-auto-rows: auto;
+        gap: 1rem;
     }
 }
 
@@ -268,38 +279,35 @@ body {
     grid-column: span 4;
     text-align: center;
     align-self: center;
-    margin: 6.938rem 0 1rem 0;
 
     @media only screen and (max-width: 900px) {
         grid-column: span 2;
     }
 }
 
+.card__slider {
+    overflow-x: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.card__slides {
+    display: flex;
+    position: relative;
+    scroll-snap-align: start;
+
+}
+
+
+.card {
+    position: relative;
+}
+
 .card--small {
     grid-column: span 1;
-
-    
-    &:hover {
-    transform: scale(1.2) translateY(-30px); /* ---- ANIMATION PRODUKTBILD -----*/
-    opacity: 100%;
-    transition: 0.25s ease-in;
-    box-shadow: 0px 5px 59px 9px rgba(0,0,0,0.42);
-    -webkit-box-shadow: 0px 5px 59px 9px rgba(0,0,0,0.42);
-    -moz-box-shadow: 0px 5px 59px 9px rgba(0,0,0,0.42);
-    z-index: 2;
-
-    .card__footer {
-        transform: scale(0.8) translate(-62.2%, -9%);
-        width: 125%;
-        background: rgba(255, 255, 255, 0.50);
-    }
-
-    }
 
     @media only screen and (max-width: 900px) {
         grid-column: span 1;
     }
-
 }
 
 .card--big {
@@ -312,41 +320,38 @@ body {
 
 }
 
-.card {
-    position: relative;
-}
-
 
 .card__img {
     opacity: 80%;
     width: 100%;
-    height: 100%;
+    /*height: 100%;*/
     border-radius: 3px;
     position:relative;
-    z-index: 0;
 
     &:hover {
-    opacity: 100%;         /* ---- ANIMATION PRODUKTBILD -----*/  
+    opacity: 100%;        
+    }
+
+    .card__img--darken {
+        filter: brightness(30%);
+        opacity: 100%;
     }
 }
 
 
 .card__footer {
     position: absolute;
-    bottom: -10px;
+    bottom: 80px;
     top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
     text-align: center;
+    z-index: 4;
 }
 
 
 
-.card__img--darken {
-    filter: brightness(30%);
-    opacity: 100%;
-}
 
 .card__body {
     position: absolute;
