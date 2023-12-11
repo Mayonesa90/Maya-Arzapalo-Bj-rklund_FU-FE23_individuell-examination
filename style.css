@@ -290,7 +290,12 @@ body {
     scroll-snap-type: x mandatory;
     display: flex;
     height: 100%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 
+    &::-webkit-scrollbar {
+        display: none;
+      }
 }
 
 .card__slides {
