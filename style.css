@@ -326,7 +326,7 @@ body {
 
 .main {
     display: grid;
-    grid-template-columns: repeat(4, minmax(18%, 16.375rem));
+    grid-template-columns: repeat(4, minmax(18%, 16rem));
     grid-auto-rows: auto 23.938rem;
     gap: 4rem 1.875rem;    
     justify-content: center;
@@ -338,6 +338,7 @@ body {
         grid-template-columns: 45% 45%;
         grid-auto-rows: auto;
         gap: 1rem;
+        padding-top: 1.813rem;
     }
 }
 
